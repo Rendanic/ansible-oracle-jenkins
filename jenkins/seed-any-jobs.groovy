@@ -1,11 +1,10 @@
-
-job('ansible-oracle-jobs') {
+job('seed-ansible-oracle-job') {
   scm {
-    git('https://github.com/Rendanic/ansible-oracle-jenkins.git')
+      git('https://github.com/Rendanic/ansible-oracle-jenkins.git')
   }
   steps {
     dsl {
-      external('ansible-oracle/test.groovy')
+      external('ansible-oracle/*.groovy')
     }
   }
 }
