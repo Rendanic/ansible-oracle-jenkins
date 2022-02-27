@@ -1,6 +1,11 @@
 job('seed-ansible-oracle-job') {
   scm {
-      git('https://github.com/Rendanic/ansible-oracle-jenkins.git')
+    git{
+      remote {
+        url('https://github.com/Rendanic/ansible-oracle-jenkins.git') 
+      }
+      extensions { }
+    }
   }
   steps {
     dsl {
