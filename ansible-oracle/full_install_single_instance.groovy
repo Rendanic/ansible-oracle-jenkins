@@ -13,6 +13,7 @@ multibranchPipelineJob('ansible-oracle-dbfs-full') {
   factory {
     workflowBranchProjectFactory {
         scriptPath('jenkins/run_playbook/Jenkinsfile')
+        sandbox()
     }
   }
 }
